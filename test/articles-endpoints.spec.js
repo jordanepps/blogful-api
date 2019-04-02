@@ -44,7 +44,7 @@ describe('Articles Endpoints', function() {
 		});
 	});
 
-	describe(`GET /api/articles/:article_id`, () => {
+	describe.only(`GET /api/articles/:article_id`, () => {
 		context('Given no articles', () => {
 			it('responds with 404', () => {
 				const articleId = 123456;
@@ -176,7 +176,7 @@ describe('Articles Endpoints', function() {
 		});
 	});
 
-	describe.only(`PATCH /api/articles/:article_id`, () => {
+	describe(`PATCH /api/articles/:article_id`, () => {
 		context(`Given no articles`, () => {
 			it(`responds with 404`, () => {
 				const articleId = 123456;

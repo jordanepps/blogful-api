@@ -77,13 +77,11 @@ articlesRouter
 		const numberOfValues = Object.values(articleToUpdate).filter(Boolean)
 			.length;
 		if (numberOfValues === 0) {
-			return res
-				.status(400)
-				.json({
-					error: {
-						message: `Reuest body must contain either 'title', 'style', or 'content'`
-					}
-				});
+			return res.status(400).json({
+				error: {
+					message: `Reuest body must contain either 'title', 'style', or 'content'`
+				}
+			});
 		}
 
 		ArticlesService.updateArticle(
